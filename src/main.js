@@ -2,11 +2,16 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+
 // 导入Vant组件
 import { Button } from 'vant'
 import 'vant/lib/button/style'
+
 // 导入全局样式
 import './styles/index.less'
+
+// 动态设置rem基准值
+import 'amfe-flexible'
 
 // 注册Vant组件
 Vue.use(Button)

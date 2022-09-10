@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 
 // 导入Vant组件
-import { Button } from 'vant'
+import { Button, NavBar, Form, Field, Toast, CountDown } from 'vant'
 import 'vant/lib/button/style'
 
 // 导入全局样式
@@ -15,6 +15,11 @@ import 'amfe-flexible'
 
 // 注册Vant组件
 Vue.use(Button)
+Vue.use(NavBar)
+Vue.use(Form)
+Vue.use(Field)
+Vue.use(Toast)
+Vue.use(CountDown)
 
 Vue.config.productionTip = false
 

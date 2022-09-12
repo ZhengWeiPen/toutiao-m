@@ -1,6 +1,10 @@
 <template>
   <div class="login-container">
-    <van-nav-bar class="page-nav-bar" title="登录" />
+    <van-nav-bar class="page-nav-bar" title="登录">
+      <template #left>
+        <van-icon size="16" name="arrow-left" @click="$router.back()"/>
+      </template>
+    </van-nav-bar>
     <van-form @submit="onSubmit" validate-trigger="onSubmit" ref="loginFrom">
       <van-field v-model="user.mobile" name="mobile" clearable :rules="loginFormRules.mobile" placeholder="请输入手机号" type="number">
         <template #left-icon>
@@ -125,6 +129,7 @@ export default {
         // 设置用户身份令牌
         this.$store.commit('setUser', data.data)
         this.$toast.success('登录成功')
+        this.$router.back()
       } catch (e) {
         // 登录失败时处理
         const { response } = e
@@ -154,10 +159,11 @@ export default {
 
   .send-sms-btn {
     width: auto;
-    height: auto;
+    height: 54px;
+    line-height: 54px;
     font-size: 22px;
     color: #666;
-    padding: 12px 19px;
+    padding: 0 19px;
     background-color: #ededed;
   }
 

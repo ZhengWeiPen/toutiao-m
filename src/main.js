@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 
 // 导入Vant组件
-import { Button, NavBar, Form, Field, Toast, CountDown } from 'vant'
+import { Dialog, Cell, Button, NavBar, Form, Field, Toast, CountDown, Tabbar, TabbarItem, Icon, Image as VanImage, Grid, GridItem } from 'vant'
 import 'vant/lib/button/style'
 
 // 导入全局样式
@@ -20,6 +20,14 @@ Vue.use(Form)
 Vue.use(Field)
 Vue.use(Toast)
 Vue.use(CountDown)
+Vue.use(Tabbar)
+Vue.use(TabbarItem)
+Vue.use(Icon)
+Vue.use(VanImage)
+Vue.use(Grid)
+Vue.use(GridItem)
+Vue.use(Cell)
+Vue.use(Dialog)
 
 Vue.config.productionTip = false
 

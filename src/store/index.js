@@ -8,7 +8,7 @@ const TOKEN_KEY = 'TOUTIAO_USER'
 // 初始化时，获取本地存储的用户身份令牌
 const userSig = getItem(TOKEN_KEY)
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state: {
     user: userSig
   },
@@ -25,3 +25,5 @@ export default new Vuex.Store({
   modules: {
   }
 })
+
+export default store
